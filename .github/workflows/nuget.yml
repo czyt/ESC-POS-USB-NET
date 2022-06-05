@@ -1,0 +1,6 @@
+- name: publish nuget package
+  uses: dansiegel/publish-nuget@1.2
+  with:
+    filename: '*.nupkg'
+    apiKey: ${{ secrets.NUGET_API_KEY }}
+    feedUrl: 'https://www.myget.org/F/someFeed/api/v2/package'
